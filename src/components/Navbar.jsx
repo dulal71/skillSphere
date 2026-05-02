@@ -7,7 +7,7 @@ import logo from '@/assets/avater.jpeg'
 import { RiArrowDropDownLine } from "react-icons/ri";
 const Navbar = () => {
     return (
-       <div className="flex items-center justify-center bg-green-50 shadow-md h-20">
+       <div className="flex items-center justify-center bg-white shadow h-20">
          <div className=" max-w-7xl mx-auto navbar">
   <div className="navbar-start">
     <div className="dropdown">
@@ -22,7 +22,7 @@ const Navbar = () => {
        <li><NavLink href={'/profile'}>Profile</NavLink></li>
       </ul>
     </div>
-    <Link href={'/'} className={`text-green-700 italic font-bold text-2xl ${inter.className} flex items-center gap-2`}><FaGraduationCap size={30}/>SkillSphere</Link>
+    <Link href={'/'} className={`text-black italic font-bold text-2xl ${inter.className} flex items-center gap-2`}><FaGraduationCap size={30}/>SkillSphere</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -33,7 +33,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end gap-2">
    <Image src={logo} width={40} height={40} className="rounded-full" alt="image"></Image>
-    <Link className="bg-green-900 btn text-white" href={'/login'}>Log Out</Link>
+    <Link className="bg-black text-white font-bold btn rounded-full shadow" href={'/login'}>Login</Link>
   </div>
 </div>
        </div>

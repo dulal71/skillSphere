@@ -1,0 +1,140 @@
+{
+    "courses":[
+        
+ [
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "React & Next.js Mastery",
+    "instructor": "Jane Smith",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build modern web apps using React and Next.js.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "category": "Development"
+  },
+  {
+    "id": 3,
+    "title": "JavaScript Fundamentals",
+    "instructor": "Michael Lee",
+    "duration": "15 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Master the basics of JavaScript programming.",
+    "image": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "category": "Programming"
+  },
+  {
+    "id": 4,
+    "title": "UI/UX Design Essentials",
+    "instructor": "Emily Davis",
+    "duration": "12 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn UI/UX design principles.",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644",
+    "category": "Design"
+  },
+  {
+    "id": 5,
+    "title": "Node.js & Express API Development",
+    "instructor": "Chris Brown",
+    "duration": "16 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build scalable backend APIs.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "MongoDB Database Crash Course",
+    "instructor": "Sarah Wilson",
+    "duration": "10 hours",
+    "rating": 4.4,
+    "level": "Beginner",
+    "description": "Learn MongoDB from basics.",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    "category": "Database"
+  },
+  {
+    "id": 7,
+    "title": "Python for Beginners",
+    "instructor": "David Miller",
+    "duration": "14 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Start programming with Python.",
+    "image": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935",
+    "category": "Programming"
+  },
+  {
+    "id": 8,
+    "title": "Advanced CSS & Tailwind CSS",
+    "instructor": "Sophia Johnson",
+    "duration": "11 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master modern CSS and Tailwind.",
+    "image": "https://images.unsplash.com/photo-1505685296765-3a2736de412f",
+    "category": "Design"
+  },
+  {
+    "id": 9,
+    "title": "TypeScript Complete Guide",
+    "instructor": "Daniel White",
+    "duration": "13 hours",
+    "rating": 4.5,
+    "level": "Intermediate",
+    "description": "Learn TypeScript step by step.",
+    "image": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+    "category": "Programming"
+  },
+  {
+    "id": 10,
+    "title": "Full Stack MERN Project Course",
+    "instructor": "Olivia Brown",
+    "duration": "22 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Build real-world MERN projects.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    "category": "Development"
+  },
+  {
+    "id": 11,
+    "title": "Git & GitHub Mastery",
+    "instructor": "James Wilson",
+    "duration": "8 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Learn version control system.",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+    "category": "Tools"
+  },
+  {
+    "id": 12,
+    "title": "Docker & DevOps Basics",
+    "instructor": "Emma Taylor",
+    "duration": "17 hours",
+    "rating": 4.5,
+    "level": "Intermediate",
+    "description": "Introduction to Docker & DevOps.",
+    "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051",
+    "category": "DevOps"
+  }
+]
+
+    ]
+}
