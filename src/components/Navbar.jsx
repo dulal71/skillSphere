@@ -7,8 +7,9 @@ import logo from '@/assets/avater.jpeg'
 import { RiArrowDropDownLine } from "react-icons/ri";
 const Navbar = () => {
     return (
-       <div className="flex items-center justify-center bg-white shadow h-20">
-         <div className=" max-w-7xl mx-auto navbar">
+
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100 h-20">
+        <div className=" max-w-7xl mx-auto navbar">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
