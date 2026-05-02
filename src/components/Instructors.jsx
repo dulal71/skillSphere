@@ -10,7 +10,7 @@ const Instructors = () => {
     Meet Our <span className="text-red-700">Top</span> Instructors
   </h2>
 
-  <div className="grid md:grid-cols-4 gap-4">
+  <div className="grid md:grid-cols-4 gap-4 px-4 md:px-0">
 
     {/* Instructor 1 */}
     <div className="bg-white p-4 rounded-md shadow hover:shadow-lg transition text-center">
