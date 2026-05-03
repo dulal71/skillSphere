@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner";
-import Footer from "@/components/Footer";
+
 import Instructors from "@/components/Instructors";
 import LearningTips from "@/components/LearningTips";
 import PopularCourses from "@/components/PopularCourses";
@@ -14,7 +14,7 @@ export default function Home() {
     <LearningTips></LearningTips>
     <Instructors></Instructors>
     <Review></Review>
-    <Footer></Footer>
+    
   </div>
       
   );

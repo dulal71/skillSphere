@@ -5,7 +5,7 @@ import { FaChevronRight } from "react-icons/fa";
 
 const Banner = () => {
     return (
-<div className="max-w-7xl mx-auto   h-[70vh] bg-[url('/banner.jpg')] bg-cover bg-center bg-no-repeat mt-4 p-5 relative">
+<div className="max-w-7xl mx-auto   h-[70vh] bg-[url('/banner.jpg')] bg-cover bg-center bg-no-repeat mt-24 p-5 relative">
 <div className="bg-white absolute p-4 space-y-3 rounded-md top-40">
    <h1 className="text-black font-semibold text-xl md:text-3xl">
       Learn from Industry <br /> Experts
