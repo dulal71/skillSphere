@@ -36,7 +36,7 @@ const Navbar = () => {
        <li><NavLink href={'/profile'}>Profile</NavLink></li>
     </ul>
   </div>
-  <div className="navbar-end gap-2">
+  <div className="navbar-end gap-2 ">
    
  <NavProfile></NavProfile>
    
