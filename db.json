@@ -1,7 +1,7 @@
 {
     "courses":[
         
- [
+ 
   {
     "id": 1,
     "title": "Complete Web Development Bootcamp",
@@ -134,7 +134,7 @@
     "image": "https://images.unsplash.com/photo-1605379399642-870262d3d051",
     "category": "DevOps"
   }
-]
+
 
     ]
 }

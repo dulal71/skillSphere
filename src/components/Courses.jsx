@@ -7,7 +7,7 @@ import { FaChevronRight } from 'react-icons/fa';
 import { FaStar } from "react-icons/fa";
 const Courses = ({courses}) => {
     console.log(courses);
-    const {title,instructor,image,rating
+    const {title,instructor,image,rating,id
 }=courses
     return (
         <div className=" card bg-base-100 w-full  shadow-sm ">
@@ -22,7 +22,7 @@ const Courses = ({courses}) => {
     <div className="card-actions justify-between items-center">
         <div className='flex items-center gap-1 px-4 border w-20'><FaStar color='gold' />
         <p>{rating}</p></div>
-<Link href={"/"} className='text-red-700 flex items-center gap-2'>Details<FaChevronRight /></Link>
+<Link href={`/coursesDetails/${id}`} className='text-red-700 flex items-center gap-2'>Details<FaChevronRight /></Link>
     </div>
   </div>
 </div>
