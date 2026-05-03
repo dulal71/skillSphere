@@ -5,6 +5,9 @@ import {Button, Description, FieldError, Form, Input, Label, TextField} from "@h
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import { authClient } from "@/lib/auth-client";
+import { toast } from "react-toastify";
+import { redirect } from "next/navigation";
 const LogIn = () => {
      const {
     register,
@@ -12,9 +15,17 @@ const LogIn = () => {
     watch,
     formState: { errors },
   } = useForm()
-      const onSubmit = (data) => {
-
-        console.log(data);
+      const onSubmit =async (data) => {
+const { user, error } = await authClient.signIn.email({
+ email: data.email, // required
+    password: data.password, // required
+})
+   if(error){
+toast.error('log in falied')
+   }else{
+toast.success('log in successfully')
+redirect('/')
+   }
   
   };
     return (

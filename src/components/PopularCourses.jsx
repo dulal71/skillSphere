@@ -5,7 +5,7 @@ import CourseSlider from "./CourseSlider";
 
 const PopularCourses =async () => {
     const allCourses =await  getData()
-    console.log(allCourses);
+   
     return (
         <div className= "max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 my-14">
        

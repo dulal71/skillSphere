@@ -1,11 +1,15 @@
+
 import { inter } from "@/app/layout";
 import Link from "next/link";
 import { FaGraduationCap } from "react-icons/fa";
 import NavLink from "./NavLink";
 import Image from "next/image";
-import logo from '@/assets/avater.jpeg'
+
 import { RiArrowDropDownLine } from "react-icons/ri";
+import NavProfile from "./NavProfile";
+
 const Navbar = () => {
+  
     return (
 
         <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100 h-20">
@@ -33,8 +37,9 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-2">
-   <Image src={logo} width={40} height={40} className="rounded-full" alt="image"></Image>
-    <Link className="bg-black text-white font-bold btn rounded-full shadow" href={'/login'}>Login</Link>
+   
+ <NavProfile></NavProfile>
+   
   </div>
 </div>
        </div>
