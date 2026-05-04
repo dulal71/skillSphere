@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 SkillSphere
 
-## Getting Started
+🌐 Live Site: https://skill-sphere-bwih.vercel.app/
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📌 Overview
+**SkillSphere** is a modern full-stack online learning platform where users can explore courses, learn skills, and manage their profiles in a smooth and secure environment.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+It includes authentication, protected routes, dynamic course system, and user profile management.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+### 🔐 Authentication System
+- Built with **Better Auth**
+- Sign In / Sign Up functionality
+- Secure session handling
+- User avatar shown in navbar
+- Login / Logout system (right side navbar)
 
-To learn more about Next.js, take a look at the following resources:
+### 🏠 Home Page
+- 🎯 Hero Banner section
+- 📚 Top 3 featured courses
+- 🆕 New Releases (6 courses)
+- 👨‍🏫 Top Instructors section
+- 🧑‍🎓 Student feedback banner
+- 🎞️ React fast marquee reviews section
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📚 Course System
+- Course listing page
+- Course details page (protected)
+- Only authenticated users can access course details
+- Route protection using middleware / proxy
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 👤 Profile System
+- User profile page
+- Profile update modal
+- Edit and update user information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 🧭 Navigation
+- Clean and responsive navbar
+- Right side:
+  - Login button (if not logged in)
+  - Logout button (if logged in)
+  - User profile image/avatar
+
+---
+
+### 🔒 Protected Routes
+- Course pages are protected
+- Course details page requires login
+- Redirect to login page if not authenticated
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚡ **Next.js** (App Router)
+- 🎨 **Tailwind CSS**
+- 💎 **DaisyUI**
+- 🧩 **HeroUI**
+- 🔐 **Better Auth**
+- 🍃 **MongoDB**
+- 🌐 REST API Integration
+- 🚀 Vercel (Deployment)
+
+## 🧱 Project Structure
+```bash id="structure123"
+skillsphere/
+│
+├── app/                # Next.js app routes
+├── components/         # Reusable UI components
+├── lib/                # API calls & helpers
+├── models/             # MongoDB schemas
+├── middleware/         # Route protection
+├── context/            # Auth context (if used)
+├── public/             # Static assets
+└── styles/             # Global styles
