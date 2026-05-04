@@ -1,5 +1,6 @@
 'use client'
 import { authClient } from "@/lib/auth-client";
+import { Avatar } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 const NavProfile = () => {
@@ -7,18 +8,25 @@ const NavProfile = () => {
        await authClient.signOut()
     }
  
-     const { 
-          data: session, 
-            } = authClient.useSession()
-              const imageSrc = session?.user?.image || '/profile.jpg' 
+     const { data:session  } = authClient.useSession()
+const user = session?.user
+console.log(user);
     return (
         <>
-            {
-      session?<div className="flex gap-2 items-center">
-        <Image src={imageSrc} width={60} height={60} className="rounded-full" alt="image"></Image>
+            {user &&<div className="flex gap-2 items-center">
+       <Avatar>
+        <Avatar.Image alt="John Doe"
+         src={user?.image}
+         referrerPolicy="no-referrer"
+         />
+        <Avatar.Fallback>{user?.name.charAt(0)} </Avatar.Fallback>
+      </Avatar>
          <Link className="bg-black text-white font-bold btn rounded-full shadow" href={'/login'} onClick={logOut}>LogOut</Link>
-        </div> : <Link className="bg-black text-white font-bold btn rounded-full shadow" href={'/login'}>LogIn</Link>
+        </div> 
     } 
+    {
+        !user && <Link className="bg-black text-white font-bold btn rounded-full shadow" href={'/login'}>LogIn</Link>
+    }
         </>
     );
 };

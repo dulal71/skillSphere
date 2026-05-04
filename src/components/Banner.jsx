@@ -9,7 +9,7 @@ const Banner = () => {
 <div className="max-w-6xl mx-auto mt-24 relative flex flex-col md:flex-row items-center justify-between gap-10 px-6 py-16 rounded-2xl bg-gradient-to-br from-blue-500/80 via-indigo-500/70 to-purple-500/60 overflow-hidden">
 
   {/* left Content */}
-  <div className="bg-white/90 backdrop-blur-md p-6 md:p-10 space-y-5 rounded-2xl shadow-lg max-w-lg">
+  <div className="bg-white/40 backdrop-blur-md p-6 md:p-10 space-y-5 rounded-2xl shadow-lg max-w-lg">
     
     <h1 className="text-gray-900 font-bold text-2xl md:text-4xl leading-tight">
       Learn from Industry <br /> Experts
@@ -47,7 +47,7 @@ const Banner = () => {
     />
 
     {/* Image tooltip */}
-    <span className="absolute top-5 left-7 md:top-1/2 -translate-y-1/2 md:-left-12 md:-translate-x-1/2 bg-white text-gray-800 text-md px-5 py-4 rounded-md shadow">
+    <span className="absolute top-5 left-7 md:top-1/2 -translate-y-1/2 md:-left-12 md:-translate-x-1/2 bg-white/90 text-gray-800 text-md px-5 py-4 rounded-md shadow">
   Learn visually with experts
 </span>
   </div>

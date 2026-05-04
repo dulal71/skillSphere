@@ -1,12 +1,14 @@
 "use client";
-import {Check} from "@gravity-ui/icons";
+import {Check, Eye, EyeClosed} from "@gravity-ui/icons";
 import { useForm } from "react-hook-form"
 import {Button, Checkbox, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import { redirect } from "next/navigation";
+import { useState } from "react";
 const SignUp = () => {
+  const [showPassword ,setShowPassword] = useState(false)
       const {
     register,
     handleSubmit,
@@ -48,7 +50,7 @@ const githubSignIn = async () => {
                    <h2 className="text-center font-semibold text-2xl ">Sign up with email</h2>
              
        <form  onSubmit={handleSubmit(onSubmit)}>
-           <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+           <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 relative">
        
        <label className="label text-black">Full Name</label>
          <input type="text" className="input "
@@ -90,7 +92,7 @@ const githubSignIn = async () => {
          {errors.email && <span className="text-red-500">{errors.email.message}</span>}
 
          <label className="label text-black">Password</label>
-         <input type="password" className="input text-black text-md"
+         <input type={showPassword? 'text': 'password'} className="input text-black text-md"
           {...register("password", { required: true ,
   minLength: {
       value: 6,
@@ -100,6 +102,12 @@ const githubSignIn = async () => {
     })}
          placeholder="Password" />
         {errors.password && <span className="text-red-500">{errors.password.message}</span>}
+        <span className='absolute right-6 top-68'>
+      
+     {
+      showPassword? <EyeClosed onClick={()=>setShowPassword(false)}></EyeClosed>: <Eye onClick={()=>setShowPassword(true)}></Eye>
+     } 
+     </span>
          <button className="btn btn-neutral mt-4">Continue</button>
        </fieldset>
        </form>

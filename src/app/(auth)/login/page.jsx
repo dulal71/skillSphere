@@ -1,6 +1,6 @@
 "use client";
 import { useForm } from "react-hook-form"
-import {Check} from "@gravity-ui/icons";
+import {Check, Eye, EyeClosed} from "@gravity-ui/icons";
 import {Button, Description, FieldError, Form, Input, Label, TextField} from "@heroui/react";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -8,7 +8,9 @@ import Link from "next/link";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import { redirect } from "next/navigation";
+import { useState } from "react";
 const LogIn = () => {
+   const [showPassword ,setShowPassword] = useState(false)
      const {
     register,
     handleSubmit,
@@ -46,7 +48,7 @@ const githubSignIn = async () => {
             <h2 className="text-center font-semibold text-2xl ">LogIn with email</h2>
       
 <form onSubmit={handleSubmit(onSubmit)}>
-    <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+    <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 relative">
 
 
  
@@ -63,7 +65,7 @@ const githubSignIn = async () => {
       {errors.email && <span className="text-red-500">{errors.email.message}</span>}
 
   <label className="label text-black">Password</label>
-  <input type="password"
+  <input  type={showPassword? 'text': 'password'}
    className="input text-black text-md"
     {...register("password", { required: true ,
   minLength: {
@@ -73,6 +75,12 @@ const githubSignIn = async () => {
         
     })}
     placeholder="Password" />
+    <span className='absolute right-6 top-32'>
+      
+     {
+      showPassword? <EyeClosed onClick={()=>setShowPassword(false)}></EyeClosed>: <Eye onClick={()=>setShowPassword(true)}></Eye>
+     } 
+     </span>
   {errors.password && <span className="text-red-500">{errors.password.message}</span>}
   <button className="btn btn-neutral mt-4">Continue</button>
 </fieldset>

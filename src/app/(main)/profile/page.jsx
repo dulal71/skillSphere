@@ -1,39 +1,43 @@
 'use client'
 
+import UpdateProfile from "@/components/UpdateProfile";
 import { authClient } from "@/lib/auth-client"
+import { Avatar } from "@heroui/react";
 import Image from "next/image";
-
+import Link from "next/link";
+import { FaFacebook, FaInstagram, FaUserEdit } from "react-icons/fa";
+import { LiaLinkedin } from "react-icons/lia";
 const Profile = () => {
   const { data: session, isLoading } = authClient.useSession();
 
-  const imageSrc = session?.user?.image || "/profile.jpg";
+const user = session?.user
 
   
     return (
-      <div className="max-w-80 p-8 h-[50vh] bg-white shadow mx-auto my-24 text-center rounded-2xl relative ">
-       <div className="h-48 p-6 rounded-2xl bg-linear-to-tr from-blue-500/80 to-indigo-300  shadow-sm ">
-<h3>Hi, {session?.user?.name}</h3>
-<p>  Welcome back</p>
-       </div>
-      <div className="flex flex-col items-center gap-3 p-8 rounded-2xl  absolute top-40 left-15
-backdrop-blur-md bg-linear-to-tr from-white/70 to-white/30 shadow-lg">
+      <div className="max-w-80 p-8 h-[50vh]  bg-linear-to-tr from-blue-500/80 to-indigo-300  shadow mx-auto my-24 text-center rounded-2xl flex justify-center items-center ">
+      
+      <div className="flex flex-col items-center gap-3 px-5 py-8 rounded-2xl 
+backdrop-blur-md bg-linear-to-b from-white/90 to-white/50 shadow-lg">
 
-  <Image
-    src={imageSrc}
-    width={100}
-    height={100}
-    alt={session?.user?.name || "Profile"}
-    className="rounded-full border-4 border-white shadow-md"
-  />
+  
+      <Avatar>
+        <Avatar.Image alt="John Doe" src={user?.image} />
+        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+      </Avatar>
 
-  <h3 className="text-lg font-semibold italic text-gray-800">
-    {session?.user?.name}
+  <h3 className="text-lg font-semibold  text-gray-800">
+  Name :  <span className="italic"> {session?.user?.name}</span>
   </h3>
 
   <p className="text-sm text-gray-600">
-    {session?.user?.email}
+   Email : {session?.user?.email}
   </p>
-<button className="btn bg-accent">Change Profile</button>
+  <div className="flex items-center gap-4">
+    <FaFacebook size={30}></FaFacebook>
+    <FaInstagram  size={30}></FaInstagram>
+    <LiaLinkedin  size={30}></LiaLinkedin>
+  </div>
+<UpdateProfile></UpdateProfile>
 </div>
        
     </div>
