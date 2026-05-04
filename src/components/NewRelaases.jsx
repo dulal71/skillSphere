@@ -23,7 +23,7 @@ height={200} alt={courses.title}></Image>
     <h3 className='font-semibold mb-2 text-xl'>{courses.title}</h3>
 <h4 className='font-semibold'>{courses.instructor}</h4>
 <div className='flex gap-5 flex-col md:flex-row'>
-    <p className='bg-amber-200 px-2 rounded-md'>{courses.level}</p>
+    <p className='bg-amber-100 px-2 rounded-md'>{courses.level}</p>
 <p className='flex items-center gap-2'><FiWatch size={20}></FiWatch>{courses.duration}</p>
 
 </div>
