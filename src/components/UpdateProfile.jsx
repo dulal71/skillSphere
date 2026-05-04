@@ -8,7 +8,7 @@ const UpdateProfile = () => {
  const submit =async (e) => {
   e.preventDefault();
 const name = e.target.name.value;
-  const image = e.target.name.value;
+  const image = e.target.image.value;
  console.log(name,image);
   await authClient.updateUser({
    

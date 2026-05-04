@@ -16,7 +16,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm()
       const onSubmit =async (data) => {
-  
+  console.log(data);
    const { user, error } = await authClient.signUp.email({
     name: data.name, 
     email: data.email, // required
@@ -67,7 +67,7 @@ const githubSignIn = async () => {
 )} 
        
     <label className="label text-black">Image URL</label>      
-   <input
+  <input
   type="url"
   className="input"
   {...register("image", {

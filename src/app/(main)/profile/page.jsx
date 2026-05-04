@@ -12,7 +12,7 @@ const Profile = () => {
 
 const user = session?.user
 
-  
+  console.log(user);
     return (
       <div className="max-w-80 p-8 h-[50vh]  bg-linear-to-tr from-blue-500/80 to-indigo-300  shadow mx-auto my-24 text-center rounded-2xl flex justify-center items-center ">
       
@@ -21,8 +21,8 @@ backdrop-blur-md bg-linear-to-b from-white/90 to-white/50 shadow-lg">
 
   
       <Avatar>
-        <Avatar.Image alt="John Doe" src={user?.image} />
-        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+        <Avatar.Image width={200} height={200} alt={user?.name} src={user?.image} />
+        <Avatar.Fallback >{user?.name.charAt(0)}</Avatar.Fallback>
       </Avatar>
 
   <h3 className="text-lg font-semibold  text-gray-800">
