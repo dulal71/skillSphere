@@ -1,4 +1,7 @@
 import Courses from "@/components/Courses";
+import SearchBar from "@/components/SearchBar";
+
+
 
 
  const getCourses = async(search ='')=>{
@@ -13,6 +16,9 @@ const AllCourses =async () => {
         <div className="max-w-7xl mx-auto mt-24 mb-10 ">
  
 <h1 className="text-[30px] text-center font-extrabold mb-4">All Courses</h1>
+           <div> 
+            <SearchBar></SearchBar>
+           </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
               {
                 allCourses.map(courses=> <Courses key={courses.id} courses={courses}></Courses>)

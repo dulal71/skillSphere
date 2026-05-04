@@ -28,6 +28,18 @@ redirect('/')
    }
   
   };
+  const googleSignIn=async()=>{
+   const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  console.log(data);
+}
+
+const githubSignIn = async () => {
+    const data = await authClient.signIn.social({
+        provider: "github"
+    })
+}
     return (
         <div className=" max-w-4xl my-28 mx-auto flex justify-center items-center">
             <div className="space-y-6">
@@ -67,8 +79,8 @@ redirect('/')
 </form>
   <div className="divider">Other log In options</div>
 <div className=" flex justify-center items-center gap-2">
-   <div className=" btn btn-outline  rounded-md p-2"><FaGoogle size={30}/></div>
-   <div  className=" btn btn-outline  rounded-md p-2"><FaGithub size={30}/></div>
+   <div onClick={googleSignIn} className=" btn btn-outline  rounded-md p-2"><FaGoogle size={30}/></div>
+   <div onClick={githubSignIn} className=" btn btn-outline  rounded-md p-2"><FaGithub size={30}/></div>
    
 </div>
 
