@@ -20,8 +20,8 @@ const user = session?.user
 backdrop-blur-md bg-linear-to-b from-white/90 to-white/50 shadow-lg">
 
   
-      <Avatar>
-        <Avatar.Image width={200} height={200} alt={user?.name} src={user?.image} />
+      <Avatar className="size-32">
+        <Avatar.Image  alt={user?.name} src={user?.image} />
         <Avatar.Fallback >{user?.name.charAt(0)}</Avatar.Fallback>
       </Avatar>
 
