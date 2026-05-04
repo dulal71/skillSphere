@@ -12,7 +12,7 @@ const SearchBar = ({allCourses,setAllCourses}) => {
    
    
     return (
-        <div className="max-w-96 mx-auto flex items-center border rounded-full overflow-hidden shadow-sm">
+        <div className="max-w-80 mx-auto flex items-center border rounded-full overflow-hidden shadow-sm">
   
   <input
     type="text"
