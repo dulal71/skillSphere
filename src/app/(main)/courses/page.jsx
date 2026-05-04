@@ -1,23 +1,31 @@
+'use client'
 import Courses from "@/components/Courses";
 import SearchBar from "@/components/SearchBar";
+import { getData } from "@/lib/fetchingData";
+import { useEffect, useState } from "react";
 
 
 
 
- const getCourses = async()=>{
-    const res = await fetch('http://localhost:5004/courses')
-    const data = await res.json()
-    return data;
-}
-const AllCourses =async () => {
-    const allCourses= await getCourses()
+
+
+const AllCourses = () => {
+  const [allCourses,setAllCourses] = useState([])
+  
+    useEffect(()=>{
+      const fetchData =async()=>{
+        const data =await getData()
+        setAllCourses(data)
+      }
+fetchData()
+    },[])
   console.log(allCourses);  
     return (
         <div className="max-w-7xl mx-auto mt-24 mb-10 ">
  
 <h1 className="text-[30px] text-center font-extrabold mb-4">All Courses</h1>
            <div> 
-            <SearchBar></SearchBar>
+            <SearchBar allCourses={allCourses} setAllCourses={setAllCourses}></SearchBar>
            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
               {
