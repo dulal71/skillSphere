@@ -4,8 +4,8 @@ import SearchBar from "@/components/SearchBar";
 
 
 
- const getCourses = async(search ='')=>{
-    const res = await fetch(`http://localhost:5004/courses`)
+ const getCourses = async()=>{
+    const res = await fetch('http://localhost:5004/courses')
     const data = await res.json()
     return data;
 }
