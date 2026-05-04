@@ -10,7 +10,7 @@ const CoursesDetails = async ({params}) => {
    const course = await getDataById(id)
    console.log(course);
     return (
-      <div className="max-w-5xl h-screen mx-auto flex justify-center items-center">
+      <div className="max-w-5xl h-screen mx-auto flex justify-center items-center mt-24 mb-6 md:mt-0">
 
   {/* Card */}
   <div className="bg-white shadow-lg rounded-2xl overflow-hidden grid md:grid-cols-2 gap-6">
