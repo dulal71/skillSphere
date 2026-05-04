@@ -3,6 +3,16 @@ import { CloudGear } from "@gravity-ui/icons";
 import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 
+export const generateMetadata= async({params})=>{
+const {id} =await params
+const res =await fetch(`https://skillsphere-server-1.onrender.com/courses/${id}`)
+const  data = await res.json()
+return{
+  title:data.title,
+   description: data.description
+}
+}
+
 
 const CoursesDetails = async ({params}) => {
    const {id} = await params
