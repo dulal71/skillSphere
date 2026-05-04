@@ -15,14 +15,14 @@ const NewRelaases = async() => {
             allCourses.slice(6, 12).map(courses=><div key={courses.id} className=' max-w-7xl mx-auto my-10'>
   
                 <div className='flex flex-col gap-2 mb-2 md:gap-0 md:flex-row justify-between items-center bg-white shadow p-3 rounded-md transition-transform duration-500 hover:scale-105'>
-<div className='flex  gap-3'>
+<div className='flex flex-col md:flex-row gap-3'>
 
 <Image src={courses.image} width={200}
 height={200} alt={courses.title}></Image>
 <div>
     <h3 className='font-semibold mb-2 text-xl'>{courses.title}</h3>
 <h4 className='font-semibold'>{courses.instructor}</h4>
-<div className='flex gap-5 flex-col md:flex-row'>
+<div className='flex gap-5 flex-row'>
     <p className='bg-amber-100 px-2 rounded-md'>{courses.level}</p>
 <p className='flex items-center gap-2'><FiWatch size={20}></FiWatch>{courses.duration}</p>
 

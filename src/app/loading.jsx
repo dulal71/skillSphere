@@ -1,11 +1,12 @@
 import React from 'react';
+import { FadeLoader } from 'react-spinners';
 
-const laoding = () => {
+const loading = () => {
     return (
         <div className='h-[70vh] flex justify-center items-center'>
-          <h1>loading...</h1>  
+         <FadeLoader></FadeLoader> 
         </div>
     );
 };
 
-export default laoding;
+export default loading;
